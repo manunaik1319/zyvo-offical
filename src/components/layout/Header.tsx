@@ -43,7 +43,7 @@ export default function Header() {
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
   const [isLocationOpen, setIsLocationOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [selectedLocation, setSelectedLocation] = useState('Bangalore')
+  const [selectedLocation, setSelectedLocation] = useState('Hyderabad')
   const [locationLoading, setLocationLoading] = useState(false)
 
   const servicesRef = useRef<HTMLDivElement>(null)
