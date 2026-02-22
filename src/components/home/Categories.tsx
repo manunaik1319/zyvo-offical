@@ -89,52 +89,80 @@ const categories = [
 
 export default function Categories() {
   return (
-    <section className="py-20 lg:py-28 bg-cream-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 lg:py-32 bg-gradient-to-b from-white via-cream-50 to-white overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -left-20 w-72 h-72 bg-primary-100 rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-20"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <span className="inline-block text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">
-            Browse by Category
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
-            Find spaces that match your needs
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-50 to-primary-100 px-5 py-2 rounded-full mb-4">
+            <Zap className="w-4 h-4 text-primary-600" />
+            <span className="text-primary-700 font-semibold text-sm uppercase tracking-wide">
+              Browse by Category
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-5 leading-tight">
+            Find spaces that match <br className="hidden sm:block" />
+            <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
+              your needs
+            </span>
           </h2>
-          <p className="text-lg text-dark-500 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-dark-600 max-w-3xl mx-auto leading-relaxed">
             Whether you need silence, coffee, or 24/7 access - we've got you covered
           </p>
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
-          {categories.map((category) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7">
+          {categories.map((category, index) => (
             <Link
               key={category.slug}
               href={`/explore/categories/${category.slug}`}
-              className="group bg-white rounded-2xl p-6 border border-dark-100 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-white rounded-3xl p-7 border border-dark-100 shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+              style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className={`w-14 h-14 ${category.lightColor} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                <category.icon className={`w-7 h-7 ${category.textColor}`} />
+              {/* Gradient Overlay on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 to-primary-100/0 group-hover:from-primary-50/50 group-hover:to-primary-100/30 transition-all duration-500 rounded-3xl"></div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className={`w-16 h-16 ${category.lightColor} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-sm`}>
+                  <category.icon className={`w-8 h-8 ${category.textColor} group-hover:scale-110 transition-transform duration-500`} />
+                </div>
+                <h3 className="font-bold text-lg text-dark-900 mb-2 group-hover:text-primary-700 transition-colors duration-300">
+                  {category.name}
+                </h3>
+                <p className="text-sm text-dark-500 mb-4 leading-relaxed">{category.description}</p>
+                <div className="flex items-center justify-between pt-3 border-t border-dark-100">
+                  <span className="text-xs font-semibold text-dark-400 bg-dark-50 px-3 py-1.5 rounded-full">
+                    {category.count} spaces
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-primary-50 flex items-center justify-center group-hover:bg-primary-600 transition-all duration-300">
+                    <ArrowRight className="w-4 h-4 text-primary-600 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300" />
+                  </div>
+                </div>
               </div>
-              <h3 className="font-semibold text-dark-900 mb-1 group-hover:text-primary-600 transition-colors">
-                {category.name}
-              </h3>
-              <p className="text-sm text-dark-500 mb-2">{category.description}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-medium text-dark-400">{category.count} spaces</span>
-                <ArrowRight className="w-4 h-4 text-dark-300 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
+
+              {/* Shine Effect */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </div>
             </Link>
           ))}
         </div>
 
         {/* View All Link */}
-        <div className="text-center mt-10">
+        <div className="text-center mt-14">
           <Link 
             href="/explore/categories"
-            className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold rounded-full hover:shadow-premium hover:scale-105 transition-all duration-300 group"
           >
             View all categories
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </div>
       </div>
