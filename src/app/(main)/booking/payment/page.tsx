@@ -84,10 +84,9 @@ export default function PaymentPage() {
   }
 
   const handlePayment = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsProcessing(true)
+    e.preventDefault();
+    setIsProcessing(true);
     
-    // Store booking data in sessionStorage
     const bookingInfo = {
       bookingId: 'ZYV' + Date.now(),
       spaceName: bookingData.spaceName,
@@ -103,16 +102,14 @@ export default function PaymentPage() {
       userName: 'Guest User',
       userEmail: 'guest@example.com',
       userPhone: '+91 98765 43210',
-    }
+    };
     
-    sessionStorage.setItem('lastBooking', JSON.stringify(bookingInfo))
+    sessionStorage.setItem('lastBooking', JSON.stringify(bookingInfo));
     
-    // Simulate payment processing
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
-    // Redirect to success page
-    window.location.href = '/booking/success'
-  }
+    window.location.href = '/booking/success';
+  };
 
   return (
     <div className="min-h-screen bg-cream-50">
