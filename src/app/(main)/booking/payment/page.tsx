@@ -87,6 +87,26 @@ export default function PaymentPage() {
     e.preventDefault()
     setIsProcessing(true)
     
+    // Store booking data in sessionStorage
+    const bookingInfo = {
+      bookingId: 'ZYV' + Date.now(),
+      spaceName: bookingData.spaceName,
+      spaceAddress: '123 MG Road, Koramangala, Bangalore - 560034',
+      seatNumber: bookingData.seatType,
+      zone: bookingData.zone,
+      date: new Date().toISOString().split('T')[0],
+      checkIn: '8:00 AM',
+      checkOut: '8:00 PM',
+      duration: 12,
+      passType: bookingData.passType,
+      amountPaid: bookingData.totalAmount,
+      userName: 'Guest User',
+      userEmail: 'guest@example.com',
+      userPhone: '+91 98765 43210',
+    }
+    
+    sessionStorage.setItem('lastBooking', JSON.stringify(bookingInfo))
+    
     // Simulate payment processing
     await new Promise(resolve => setTimeout(resolve, 2000))
     

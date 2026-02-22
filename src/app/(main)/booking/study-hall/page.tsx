@@ -456,10 +456,13 @@ function BookingContent() {
                     </span>
                   </div>
 
-                  <button className="w-full btn-primary py-4 text-base">
+                  <Link 
+                    href="/booking/payment"
+                    className="w-full btn-primary py-4 text-base flex items-center justify-center gap-2"
+                  >
                     <CheckCircle className="w-5 h-5" />
                     Confirm Booking
-                  </button>
+                  </Link>
 
                   <p className="text-xs text-center text-dark-400">
                     <Shield className="w-3 h-3 inline mr-1" />
