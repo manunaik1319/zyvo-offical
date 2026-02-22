@@ -90,7 +90,7 @@ export default function PaymentPage() {
     const bookingInfo = {
       bookingId: 'ZYV' + Date.now(),
       spaceName: bookingData.spaceName,
-      spaceAddress: '123 MG Road, Koramangala, Bangalore - 560034',
+      spaceAddress: '123 Road No 12, Banjara Hills, Hyderabad - 500034',
       seatNumber: bookingData.seatType,
       zone: bookingData.zone,
       date: new Date().toISOString().split('T')[0],

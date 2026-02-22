@@ -77,7 +77,7 @@ const featuredTutors = [
     reviews: 156,
     experience: '15+ years experience',
     tags: ['IIT-JEE', 'NEET', 'Olympiad'],
-    location: 'New Delhi, Delhi',
+    location: 'Hyderabad, Telangana',
     modes: ['In-Person', 'Online'],
     availability: 'Available Tomorrow',
     hourlyRate: 800,

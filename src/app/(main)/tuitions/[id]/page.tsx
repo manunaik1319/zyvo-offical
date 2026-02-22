@@ -138,7 +138,7 @@ export default function TutorProfilePage() {
                     </div>
                     <div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
-                      <span>New Delhi (2.5 km away)</span>
+                      <span>Hyderabad (2.5 km away)</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">

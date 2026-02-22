@@ -17,7 +17,7 @@ const contactReasons = [
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'hello@zyvo.in', href: 'mailto:hello@zyvo.in' },
   { icon: Phone, label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
-  { icon: MapPin, label: 'Address', value: 'Karol Bagh, New Delhi - 110005', href: '#' },
+  { icon: MapPin, label: 'Address', value: 'Jubilee Hills, Hyderabad - 500033', href: '#' },
   { icon: Clock, label: 'Hours', value: 'Mon-Sat: 9AM - 7PM', href: '#' },
 ]
 

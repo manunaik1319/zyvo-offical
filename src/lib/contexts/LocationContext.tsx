@@ -21,7 +21,7 @@ interface LocationContextType {
 const LocationContext = createContext<LocationContextType | undefined>(undefined)
 
 export function LocationProvider({ children }: { children: React.ReactNode }) {
-  const [selectedCity, setSelectedCity] = useState('Bangalore')
+  const [selectedCity, setSelectedCity] = useState('Hyderabad')
   const { location, loading, error, getCurrentLocation, clearLocation } = useGeolocation()
 
   // Update selected city when location is detected

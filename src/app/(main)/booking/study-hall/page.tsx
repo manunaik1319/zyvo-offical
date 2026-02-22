@@ -162,7 +162,7 @@ function BookingContent() {
             <div>
               <h1 className="text-2xl font-bold text-dark-900">Central Study Hub</h1>
               <p className="text-dark-500 flex items-center gap-2 mt-1">
-                <MapPin className="w-4 h-4" /> Koramangala, Bangalore
+                <MapPin className="w-4 h-4" /> Banjara Hills, Hyderabad
                 <span className="text-dark-300">•</span>
                 <Star className="w-4 h-4 text-secondary-400 fill-secondary-400" />
                 <span className="font-medium text-dark-700">4.9</span>

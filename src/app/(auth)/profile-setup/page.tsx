@@ -243,7 +243,7 @@ export default function ProfileSetupPage() {
                 <label className="block text-sm font-medium text-dark-700 mb-2">Area/Locality</label>
                 <input
                   type="text"
-                  placeholder="e.g., Koramangala, Indiranagar"
+                  placeholder="e.g., Banjara Hills, Jubilee Hills"
                   value={formData.area}
                   onChange={(e) => setFormData({ ...formData, area: e.target.value })}
                   className="w-full px-4 py-3 border border-dark-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500"

@@ -166,7 +166,7 @@ export default function Hero() {
                       </div>
                       <div>
                         <h3 className="text-lg font-extrabold">Central Study Hub</h3>
-                        <p className="text-sm text-white/90">Koramangala, Bangalore</p>
+                        <p className="text-sm text-white/90">Banjara Hills, Hyderabad</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 mt-3">

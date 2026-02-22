@@ -12,7 +12,7 @@ const bookings = [
   {
     id: 'ZYV2024001',
     spaceName: 'Central Study Hub',
-    location: 'Koramangala, Bangalore',
+    location: 'Banjara Hills, Hyderabad',
     date: 'Dec 29, 2024',
     time: '8:00 AM - 8:00 PM',
     seat: 'A5',

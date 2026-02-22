@@ -12,7 +12,7 @@ const popularSpaces = [
   {
     id: 1,
     name: 'Central Study Hub',
-    location: 'Koramangala, Bangalore',
+    location: 'Banjara Hills, Hyderabad',
     rating: 4.9,
     reviews: 234,
     price: 50,

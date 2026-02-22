@@ -31,7 +31,7 @@ interface BookingData {
 const defaultBookingData: BookingData = {
   bookingId: 'ZYV2024DEMO',
   spaceName: 'Central Study Hub',
-  spaceAddress: '123 MG Road, Koramangala, Bangalore - 560034',
+  spaceAddress: '123 Road No 12, Banjara Hills, Hyderabad - 500034',
   seatNumber: 'A5',
   zone: 'Quiet Zone',
   date: new Date().toISOString().split('T')[0],

@@ -14,8 +14,8 @@ export default function ProfilePage() {
     name: 'Alex Johnson',
     email: 'alex.johnson@example.com',
     phone: '+91 98765 43210',
-    city: 'Bangalore',
-    area: 'Koramangala',
+    city: 'Hyderabad',
+    area: 'Banjara Hills',
     bio: 'Engineering student passionate about learning. Love finding quiet study spots!',
     joinedDate: 'March 2024',
   })

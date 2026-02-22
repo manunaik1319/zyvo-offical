@@ -12,7 +12,7 @@ const topTutors = [
     name: 'Dr. Priya Sharma',
     subject: 'Mathematics',
     specialization: 'JEE/NEET Prep',
-    location: 'Koramangala, Bangalore',
+    location: 'Banjara Hills, Hyderabad',
     rating: 4.9,
     reviews: 156,
     students: 500,

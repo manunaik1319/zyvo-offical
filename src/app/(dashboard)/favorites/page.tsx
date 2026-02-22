@@ -13,7 +13,7 @@ const favoriteSpaces = [
     id: 1,
     type: 'space',
     name: 'Central Study Hub',
-    location: 'Koramangala, Bangalore',
+    location: 'Banjara Hills, Hyderabad',
     rating: 4.8,
     reviews: 234,
     price: 99,
