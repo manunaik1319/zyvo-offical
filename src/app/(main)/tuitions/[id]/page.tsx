@@ -500,8 +500,6 @@ export default function TutorProfilePage() {
           </div>
         </section>
       </div>
-
-      </div>
     </div>
   )
 }
